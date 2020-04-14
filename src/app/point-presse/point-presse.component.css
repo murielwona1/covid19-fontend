@@ -40,3 +40,19 @@ ul.timeline > li:before {
   font-size: 13px;
   font-weight: 600;
 }
+.frame{
+   width: 100%;
+    height: 360px;
+}
+@media only screen and (max-width: 762px){
+  .frame{
+    width: 100%;
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .frame{
+    width: 100%;
+    height: 150px;
+  }
+}

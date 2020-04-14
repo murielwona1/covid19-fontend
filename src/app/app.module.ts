@@ -50,6 +50,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ActualiteComponent } from './actualite/actualite.component';
 import { PointPresseComponent } from './point-presse/point-presse.component';
+import { SituationCamerounComponent } from './situation-cameroun/situation-cameroun.component';
+import { SituationMondeComponent } from './situation-monde/situation-monde.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { PointPresseComponent } from './point-presse/point-presse.component';
     FooterComponent,
     AccueilComponent,
     ActualiteComponent,
-    PointPresseComponent
+    PointPresseComponent,
+    SituationCamerounComponent,
+    SituationMondeComponent
   ],
   imports: [
     BrowserModule,
