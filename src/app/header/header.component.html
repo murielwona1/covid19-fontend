@@ -1,0 +1,61 @@
+
+  <div class="row ">
+    <div class="col-md-4 col-sm-4 col-4">
+      <hr class="vert">
+    </div>
+    <div class="col-md-4 col-sm-4 col-4">
+      <hr class="rouge">
+    </div>
+    <div class="col-md-4 col-sm-4 col-4">
+      <hr class="jaune">
+    </div>
+  </div>
+
+<div class="menu">
+  <div class="menu-dropdown">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="actualite">
+      Actualités
+    </button>
+    <mat-menu #actualite="matMenu">
+      <button mat-menu-item [routerLink]="['/actualités/point-presse']" routerLinkActive="router-link-active" >Point presse</button>
+      <button mat-menu-item>Situation du cameroun</button>
+      <button mat-menu-item>Situation dans le monde</button>
+    </mat-menu>
+  </div>
+  <div class="menu-dropdown">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+      La maladie du COVID-19
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  <div class="menu-dropdown">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+      Que fait le gouvernement
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  <div class="menu-dropdown">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+      Recommendations
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  <div class="menu-dropdown">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+      Ressources
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    padding-right: 0px;
+}
+.div-on-banner {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 50px;
+    color: white;
+    text-align: center;
+    top: 5%;
+}
+.text-fromat{
+  color: white;
+  text-align: center;
+  text-justify: inter-word;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.dons{
+  background-color: #FCD116;
+  width: 100%;
+  height: 120px;
+  border-radius: 20px;
+  padding: 16px;
+}
+.volontaire{
+  background-color: #C00000;
+  width: 100%;
+  height: 120px;
+  border-radius: 20px;
+  padding: 16px;
+}
+h3{
+  color: black;
+  text-align: center;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 762px){
+  .div-on-banner {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 20px;
+    color: black;
+    text-align: center;
+    top: 0%;
+  }
+  .text-fromat{
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .div-on-banner {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    top: 0%;
+  }
+  .text-fromat{
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 200;
+  }
+}
+  @media only screen and (max-width: 500px){
+  .div-on-banner {
+   position: relative;
+   background-color: white;
+  }
+  .text-responsive{
+    display: block;
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+}

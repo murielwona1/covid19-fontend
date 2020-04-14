@@ -1,0 +1,60 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mat-drawer-container{
+  background-color: white;
+}
+.header{
+   background-image: url("https://mbifoundation.com/news/img/Default_1000x300.jpg");
+    background-size: cover;
+}
+.social-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.social-btn {
+  width: calc(100%/8);
+  height: 60px;
+  border: 1px solid black ;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.social-btn>.mat-icon{
+  width: 50px;
+  height: 50px;
+}
+.size-social-icon {
+  font-size: 50px;
+}
+.body{
+  min-height: 80%;
+}
+
+@media only screen and (max-width: 762px){
+  .social-btn>.mat-icon{
+    width: 40px;
+    height: 40px;
+  }
+  .size-social-icon {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .social-btn>.mat-icon{
+    width: 30px;
+    height: 30px;
+  }
+  .size-social-icon {
+    font-size: 30px;
+  }
+}
