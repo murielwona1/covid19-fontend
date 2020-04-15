@@ -1,51 +1,50 @@
-
 <mat-sidenav-container class="example-container" (backdropClick)="sidenav.close()">
-    <mat-sidenav  class="side" #sidenav (keydown.escape)="close('escape')" disableClose>
-      <div class="container-fluid">
-        <button mat-icon-button (click)="sidenav.close()">
-          <mat-icon style="color: white;">apps</mat-icon>
-        </button>
-        <br>
-        <app-sidebar></app-sidebar>
-      </div>
-    </mat-sidenav>
+  <mat-sidenav class="side" #sidenav (keydown.escape)="close('escape')" disableClose>
+    <div class="container-fluid">
+      <button mat-icon-button (click)="sidenav.close()">
+        <mat-icon style="color: white;">apps</mat-icon>
+      </button>
+      <br>
+      <app-sidebar></app-sidebar>
+    </div>
+  </mat-sidenav>
 
-    <mat-sidenav-content>
-      <div class="social-bar">
-        <div class="social-btn" (click)="sidenav.open()">
-          <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">apps</mat-icon>
-        </div>
-        <div class="social-btn" [routerLink]="['/']" routerLinkActive="router-link-active" >
-          <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">home</mat-icon>
-        </div>
-        <div class="social-btn">
-          <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">search</mat-icon>
-        </div>
-        <div class="social-btn">
-          <fa name="whatsapp" class="size-social-icon"></fa>
-        </div>
-        <div class="social-btn">
-          <fa name="facebook-f" class="size-social-icon"></fa>
-        </div>
-        <div class="social-btn">
-          <fa name="youtube" class="size-social-icon"></fa>
-        </div>
-        <div class="social-btn">
-          <fa name="twitter" class="size-social-icon"></fa>
-        </div>
-        <div class="social-btn">
-          <fa name="linkedin" class="size-social-icon"></fa>
-        </div>
-        <div class="social-btn">
-          <fa name="instagram" class="size-social-icon"></fa>
-        </div>
+  <mat-sidenav-content>
+    <div class="social-bar">
+      <div class="social-btn" (click)="sidenav.open()">
+        <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">apps</mat-icon>
       </div>
-      <div class="header">
-        <app-header></app-header>
+      <div class="social-btn" [routerLink]="['/']" routerLinkActive="router-link-active">
+        <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">home</mat-icon>
       </div>
-      <div class="body">
-        <router-outlet></router-outlet>
+      <div class="social-btn">
+        <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">search</mat-icon>
       </div>
-      <app-footer></app-footer>
-    </mat-sidenav-content>
+      <div class="social-btn">
+        <fa name="whatsapp" class="size-social-icon"></fa>
+      </div>
+      <div class="social-btn">
+        <fa name="facebook-f" class="size-social-icon"></fa>
+      </div>
+      <div class="social-btn">
+        <fa name="youtube" class="size-social-icon"></fa>
+      </div>
+      <div class="social-btn">
+        <fa name="twitter" class="size-social-icon"></fa>
+      </div>
+      <div class="social-btn">
+        <fa name="linkedin" class="size-social-icon"></fa>
+      </div>
+      <div class="social-btn">
+        <fa name="instagram" class="size-social-icon"></fa>
+      </div>
+    </div>
+    <div class="header" style="position: absolute; z-index: 1; width: 100%;">
+      <app-header></app-header>
+    </div>
+    <div class="body" style="position: relative; z-index: -10;">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
 </mat-sidenav-container>

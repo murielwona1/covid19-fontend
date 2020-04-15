@@ -56,6 +56,9 @@ import { DonsComponent } from './dons/dons.component';
 import { DonsProjetComponent } from './dons-projet/dons-projet.component';
 import { FondSolidariteComponent } from './fond-solidarite/fond-solidarite.component';
 import { VolontaireComponent } from './volontaire/volontaire.component';
+import { RessourcesComponent } from './ressources/ressources.component';
+import { BaseDeDonneesRessourcesComponent } from './base-de-donnees-ressources/base-de-donnees-ressources.component';
+import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibliotheque-ressources.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { VolontaireComponent } from './volontaire/volontaire.component';
     DonsComponent,
     DonsProjetComponent,
     FondSolidariteComponent,
-    VolontaireComponent
+    VolontaireComponent,
+    RessourcesComponent,
+    BaseDeDonneesRessourcesComponent,
+    BibliothequeRessourcesComponent
   ],
   imports: [
     BrowserModule,

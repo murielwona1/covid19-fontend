@@ -1,7 +1,8 @@
+import { BaseDeDonneesRessourcesComponent } from './base-de-donnees-ressources/base-de-donnees-ressources.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
-import { ActualiteComponent } from './actualite/actualite.component' ;
+import { ActualiteComponent } from './actualite/actualite.component';
 import { PointPresseComponent } from './point-presse/point-presse.component';
 import { SituationCamerounComponent } from './situation-cameroun/situation-cameroun.component';
 import { SituationMondeComponent } from './situation-monde/situation-monde.component';
@@ -12,16 +13,19 @@ import { VolontaireComponent } from './volontaire/volontaire.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
-  { path: 'accueil', component: AccueilComponent},
-  { path: 'actualités', component: ActualiteComponent, children: [
-    { path: 'point-presse', component: PointPresseComponent },
-    { path: 'situation-cameroun', component: SituationCamerounComponent },
-    { path: 'situation-monde', component: SituationMondeComponent },
-    { path: '', component: PointPresseComponent },
-  ]},
+  { path: 'accueil', component: AccueilComponent },
+  {
+    path: 'actualités', component: ActualiteComponent, children: [
+      { path: 'point-presse', component: PointPresseComponent },
+      { path: 'situation-cameroun', component: SituationCamerounComponent },
+      { path: 'situation-monde', component: SituationMondeComponent },
+      { path: '', component: PointPresseComponent },
+    ]
+  },
   { path: 'dons-projet', component: DonsProjetComponent },
   { path: 'volontaire', component: VolontaireComponent },
   { path: 'fond-solidarite', component: FondSolidariteComponent },
+  { path: 'base-de-donnees-ressources', component: BaseDeDonneesRessourcesComponent },
   { path: 'dons', component: DonsComponent },
   { path: '*', component: AccueilComponent },
   { path: '', component: AccueilComponent },

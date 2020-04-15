@@ -1,39 +1,48 @@
-.row{
+.row {
   max-width: 100%;
-  margin: 0;
+  margin-top: -7px;
+  margin-bottom: -7px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.vert{
+.no-padding {
+  margin: 0 !important;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.vert {
   background-color: green;
   height: 2px;
 }
-.rouge{
+.rouge {
   background-color: rgb(255, 0, 0);
   height: 2px;
 }
-.jaune{
+.jaune {
   background-color: rgb(255, 230, 0);
   height: 2px;
 }
-.menu{
+.menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
 }
-.menu-dropdown{
-  width: calc(100%/5);
+.menu-dropdown {
+  width: calc(100% / 5);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0px 16px;
+  margin-left: 5px;
+  padding: 0px;
 }
 .btn-secondary {
-  background-color: #203780;
+  background-color: #233781;
 }
-@media only screen and (max-width: 762px){
-  .menu{
+@media only screen and (max-width: 762px) {
+  .menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -41,8 +50,8 @@
     flex-wrap: wrap;
     padding-bottom: 20px;
   }
-  .menu-dropdown{
-    width: calc(100%/3.5);
+  .menu-dropdown {
+    width: calc(100% / 3.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,8 +59,16 @@
     margin: 10px 16px;
   }
 }
-@media only screen and (max-width: 576px){
-  .menu{
+@media only screen and (max-width: 576px) {
+  .menu {
     display: none;
   }
+}
+
+::ng-deep  button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+  padding: 2px;
 }

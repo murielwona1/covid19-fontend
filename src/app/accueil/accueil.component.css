@@ -1,45 +1,48 @@
 .carousel {
-    position: relative;
-    width: 100%;
-    padding-right: 0px;
+  position: relative;
+  width: 100%;
+  padding-right: 0px;
 }
+
 .div-on-banner {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.199);
-    padding: 50px;
-    color: white;
-    text-align: center;
-    top: 5%;
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0, 0, 255, 0.26);
+  padding: 50px;
+  text-align: center;
+  top: 5%;
+  z-index: 10;
 }
-.text-fromat{
+.text-fromat {
   color: white;
   text-align: center;
   text-justify: inter-word;
   margin-bottom: 20px;
   font-weight: 800;
+  margin-top: 50px;
 }
-.dons{
-  background-color: #FCD116;
+.dons {
+  background-color: #FFCA0E;
   width: 100%;
-  height: 120px;
+  height: 100px;
   border-radius: 20px;
   padding: 16px;
 }
-.volontaire{
-  background-color: #C00000;
+.volontaire {
+  background-color: #D41101;
   width: 100%;
-  height: 120px;
+  height: 100px;
   border-radius: 20px;
   padding: 16px;
 }
-h3{
+h3 {
   color: black;
   text-align: center;
   font-weight: 800;
 }
 
-@media only screen and (max-width: 762px){
+/* @media only screen and (max-width: 762px) {
   .div-on-banner {
     position: relative;
     width: 100%;
@@ -49,15 +52,15 @@ h3{
     text-align: center;
     top: 0%;
   }
-  .text-fromat{
+  .text-fromat {
     color: black;
     text-align: center;
     margin-bottom: 5px;
     font-weight: 600;
   }
-}
+} */
 
-@media only screen and (max-width: 576px){
+/* @media only screen and (max-width: 576px) {
   .div-on-banner {
     position: relative;
     width: 100%;
@@ -67,19 +70,19 @@ h3{
     text-align: center;
     top: 0%;
   }
-  .text-fromat{
+  .text-fromat {
     color: black;
     text-align: center;
     margin-bottom: 5px;
     font-weight: 200;
   }
 }
-  @media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .div-on-banner {
-   position: relative;
-   background-color: white;
+    position: relative;
+    background-color: white;
   }
-  .text-responsive{
+  .text-responsive {
     display: block;
     color: black;
     text-align: center;
@@ -87,5 +90,4 @@ h3{
     font-weight: 500;
     font-size: 16px;
   }
-
-}
+} */

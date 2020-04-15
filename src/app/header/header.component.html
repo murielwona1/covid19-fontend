@@ -1,15 +1,14 @@
-
-  <div class="row ">
-    <div class="col-md-4 col-sm-4 col-4">
-      <hr class="vert">
-    </div>
-    <div class="col-md-4 col-sm-4 col-4">
-      <hr class="rouge">
-    </div>
-    <div class="col-md-4 col-sm-4 col-4">
-      <hr class="jaune">
-    </div>
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-4 no-padding">
+    <hr class="vert">
   </div>
+  <div class="col-md-4 col-sm-4 col-4 no-padding">
+    <hr class="rouge">
+  </div>
+  <div class="col-md-4 col-sm-4 col-4 no-padding">
+    <hr class="jaune">
+  </div>
+</div>
 
 <div class="menu">
   <div class="menu-dropdown">
@@ -17,45 +16,54 @@
       Actualités
     </button>
     <mat-menu #actualite="matMenu">
-      <button mat-menu-item [routerLink]="['/actualités/point-presse']" routerLinkActive="router-link-active" >Point presse</button>
+      <button mat-menu-item [routerLink]="['/actualités/point-presse']" routerLinkActive="router-link-active">Point
+        presse</button>
       <button mat-menu-item>Situation du cameroun</button>
       <button mat-menu-item>Situation dans le monde</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">
-    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="maladie">
       La maladie du COVID-19
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <mat-menu #maladie="matMenu">
+      <button mat-menu-item>Origine</button>
+      <button mat-menu-item>Symptômes</button>
+      <button mat-menu-item>Prévention</button>
+      <button mat-menu-item>Traitement</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">
-    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="gouvernement">
       Que fait le gouvernement
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <mat-menu #gouvernement="matMenu">
+      <button mat-menu-item>La stratégie</button>
+      <button mat-menu-item>Pour les Particuliers</button>
+      <button mat-menu-item>Pour les Entreprises</button>
+      <button mat-menu-item>Pour les Camerounais à l'étranger</button>
+      <button mat-menu-item>Sur le terrain</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">
-    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="recommendations">
       Recommendations
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <mat-menu #recommendations="matMenu">
+      <button mat-menu-item>Pour les Professionnels</button>
+      <button mat-menu-item>Pour les Voyageurs</button>
+      <button mat-menu-item>Pour les Entreprises</button>
+      <button mat-menu-item>Pour les Camerounais à l'étranger</button>
+      <button mat-menu-item>Pour les Cultes</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">
-    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="menu">
+    <button class="btn btn-secondary dropdown-toggle btn-block" [matMenuTriggerFor]="ressources">
       Ressources
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+    <mat-menu #ressources="matMenu">
+      <button mat-menu-item>Bibliothèque</button>
+      <button mat-menu-item routerLink="/base-de-donnees-ressources">Base de données</button>
     </mat-menu>
   </div>
 </div>
