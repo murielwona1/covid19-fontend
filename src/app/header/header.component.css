@@ -36,7 +36,7 @@
   .menu{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 20px;

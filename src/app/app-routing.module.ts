@@ -5,6 +5,10 @@ import { ActualiteComponent } from './actualite/actualite.component' ;
 import { PointPresseComponent } from './point-presse/point-presse.component';
 import { SituationCamerounComponent } from './situation-cameroun/situation-cameroun.component';
 import { SituationMondeComponent } from './situation-monde/situation-monde.component';
+import { DonsComponent } from './dons/dons.component';
+import { DonsProjetComponent } from './dons-projet/dons-projet.component';
+import { FondSolidariteComponent } from './fond-solidarite/fond-solidarite.component';
+import { VolontaireComponent } from './volontaire/volontaire.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
@@ -15,6 +19,10 @@ const routes: Routes = [
     { path: 'situation-monde', component: SituationMondeComponent },
     { path: '', component: PointPresseComponent },
   ]},
+  { path: 'dons-projet', component: DonsProjetComponent },
+  { path: 'volontaire', component: VolontaireComponent },
+  { path: 'fond-solidarite', component: FondSolidariteComponent },
+  { path: 'dons', component: DonsComponent },
   { path: '*', component: AccueilComponent },
   { path: '', component: AccueilComponent },
 ];

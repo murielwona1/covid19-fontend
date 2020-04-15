@@ -1,7 +1,13 @@
 
 <mat-sidenav-container class="example-container" (backdropClick)="sidenav.close()">
-    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-      <app-sidebar></app-sidebar>
+    <mat-sidenav  class="side" #sidenav (keydown.escape)="close('escape')" disableClose>
+      <div class="container-fluid">
+        <button mat-icon-button (click)="sidenav.close()">
+          <mat-icon style="color: white;">apps</mat-icon>
+        </button>
+        <br>
+        <app-sidebar></app-sidebar>
+      </div>
     </mat-sidenav>
 
     <mat-sidenav-content>
@@ -9,7 +15,7 @@
         <div class="social-btn" (click)="sidenav.open()">
           <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">apps</mat-icon>
         </div>
-        <div class="social-btn">
+        <div class="social-btn" [routerLink]="['/']" routerLinkActive="router-link-active" >
           <mat-icon aria-hidden="false" class="size-social-icon" aria-label="Example home icon">home</mat-icon>
         </div>
         <div class="social-btn">

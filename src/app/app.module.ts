@@ -52,6 +52,10 @@ import { ActualiteComponent } from './actualite/actualite.component';
 import { PointPresseComponent } from './point-presse/point-presse.component';
 import { SituationCamerounComponent } from './situation-cameroun/situation-cameroun.component';
 import { SituationMondeComponent } from './situation-monde/situation-monde.component';
+import { DonsComponent } from './dons/dons.component';
+import { DonsProjetComponent } from './dons-projet/dons-projet.component';
+import { FondSolidariteComponent } from './fond-solidarite/fond-solidarite.component';
+import { VolontaireComponent } from './volontaire/volontaire.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,11 @@ import { SituationMondeComponent } from './situation-monde/situation-monde.compo
     ActualiteComponent,
     PointPresseComponent,
     SituationCamerounComponent,
-    SituationMondeComponent
+    SituationMondeComponent,
+    DonsComponent,
+    DonsProjetComponent,
+    FondSolidariteComponent,
+    VolontaireComponent
   ],
   imports: [
     BrowserModule,

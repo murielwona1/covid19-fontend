@@ -1,0 +1,44 @@
+.font-image{
+  background-image: url("../../assets/images/uni.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-1{
+  border: 1px solid white;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.544);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-2{
+  border: 1px solid white;
+  height: 125px;
+  background-color: rgba(0, 0, 0, 0.387);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  color: #203780;
+  text-align: center;
+  font-weight: 700;
+}
+h4{
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 762px){
+
+}
+
+@media only screen and (max-width: 576px){
+
+}

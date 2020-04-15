@@ -38,6 +38,10 @@
 .body{
   min-height: 80vh;
 }
+.side{
+  width: 300px;
+  background-color: #203780;
+}
 
 @media only screen and (max-width: 762px){
   .social-btn>.mat-icon{
@@ -56,5 +60,9 @@
   }
   .size-social-icon {
     font-size: 30px;
+  }
+  .side{
+    width: 100%;
+    background-color: #203780;
   }
 }
