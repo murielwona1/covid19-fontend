@@ -45,6 +45,12 @@
   width: 300px;
   background-color: #203780;
 }
+.content{
+  padding: 0 ;
+}
+.sidebar{
+  display: none;
+}
 
 @media only screen and (max-width: 762px) {
   .social-btn > .mat-icon {
@@ -67,6 +73,9 @@
   .side {
     width: 100%;
     background-color: #203780;
+  }
+  .sidebar{
+    display: block;
   }
 }
 

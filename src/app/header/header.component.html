@@ -16,10 +16,10 @@
       Actualités
     </button>
     <mat-menu #actualite="matMenu">
-      <button mat-menu-item [routerLink]="['/actualités/point-presse']" routerLinkActive="router-link-active">Point
+      <button [routerLink]="['/actualités/point-presse']" routerLinkActive="router-link-active" mat-menu-item >Point
         presse</button>
-      <button mat-menu-item>Situation du cameroun</button>
-      <button mat-menu-item>Situation dans le monde</button>
+      <button mat-menu-item [routerLink]="['/actualités/situation-cameroun']" routerLinkActive="router-link-active" >Situation du cameroun</button>
+      <button mat-menu-item [routerLink]="['/actualités/situation-monde']" routerLinkActive="router-link-active"  >Situation dans le monde</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">
@@ -62,8 +62,8 @@
       Ressources
     </button>
     <mat-menu #ressources="matMenu">
-      <button mat-menu-item>Bibliothèque</button>
-      <button mat-menu-item routerLink="/base-de-donnees-ressources">Base de données</button>
+      <button mat-menu-item [routerLink]="['/bibliotheque']" routerLinkActive="router-link-active">Bibliothèque</button>
+      <button mat-menu-item [routerLink]="['/base-de-donnees-ressources']" routerLinkActive="router-link-active"  >Base de données</button>
     </mat-menu>
   </div>
 </div>

@@ -10,6 +10,7 @@ import { DonsComponent } from './dons/dons.component';
 import { DonsProjetComponent } from './dons-projet/dons-projet.component';
 import { FondSolidariteComponent } from './fond-solidarite/fond-solidarite.component';
 import { VolontaireComponent } from './volontaire/volontaire.component';
+import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibliotheque-ressources.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'fond-solidarite', component: FondSolidariteComponent },
   { path: 'base-de-donnees-ressources', component: BaseDeDonneesRessourcesComponent },
   { path: 'dons', component: DonsComponent },
+  { path: 'bibliotheque', component: BibliothequeRessourcesComponent },
   { path: '*', component: AccueilComponent },
   { path: '', component: AccueilComponent },
 ];

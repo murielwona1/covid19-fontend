@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav'
+import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,12 @@ import { MatSidenav } from '@angular/material/sidenav'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // @ViewChild('sidenav', null) sidenav: MatSidenav;
-  // reason = '';
+  @ViewChild('sidenav', null) sidenav: MatSidenav;
 
-  // close(reason: string) {
-  //   this.reason = reason;
-  //   this.sidenav.close();
-  // }
+  constructor(private route: Router) {
+  }
+   navigate(routes) {
+    this.route.navigate([routes]);
+    this.sidenav.close();
+  }
 }

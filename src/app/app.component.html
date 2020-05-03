@@ -1,11 +1,97 @@
 <mat-sidenav-container class="example-container" (backdropClick)="sidenav.close()">
-  <mat-sidenav class="side" #sidenav (keydown.escape)="close('escape')" disableClose>
+  <mat-sidenav class="side" #sidenav  disableClose>
     <div class="container-fluid">
       <button mat-icon-button (click)="sidenav.close()">
         <mat-icon style="color: white;">apps</mat-icon>
       </button>
       <br>
-      <app-sidebar></app-sidebar>
+      <div class="content">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Application mobile</li>
+          <br>
+          <li class="list-group-item">Personne agé</li>
+          <br>
+          <li class="list-group-item">Scolarité</li>
+          <br>
+          <li class="list-group-item">les aides</li>
+          <br>
+          <li class="list-group-item">Mon compte</li>
+        </ul>
+      </div>
+      <br>
+      <div class="sidebar">
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Actualités
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" (click)="navigate('/actualités/point-presse')">Point Presse</li>
+              <li class="list-group-item" (click)="navigate('/actualités/situation-cameroun')">Situation au Cameroun</li>
+              <li class="list-group-item" (click)="navigate('/actualités/situation-monde')">Situation dans le monde</li>
+            </ul>
+          </mat-expansion-panel>
+          <br>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Maladie du COVID-19
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Orisine</li>
+              <li class="list-group-item">Symptomes</li>
+              <li class="list-group-item">Prevention</li>
+              <li class="list-group-item">Traitement</li>
+            </ul>
+          </mat-expansion-panel>
+          <br>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Que fait le gouvernement
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">La stratégie</li>
+              <li class="list-group-item">Pour les particuliers</li>
+              <li class="list-group-item">Pour les entreprises</li>
+              <li class="list-group-item">Pour les camerounais à l'etrangé</li>
+              <li class="list-group-item">Sur le terrain</li>
+            </ul>
+          </mat-expansion-panel>
+          <br>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Recommandations
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Pour les professionnels</li>
+              <li class="list-group-item">Pour les voyageurs</li>
+              <li class="list-group-item">Pour les entreprises</li>
+              <li class="list-group-item">Pour les camerounais à l'etrangé</li>
+              <li class="list-group-item">Pour les cultes</li>
+            </ul>
+          </mat-expansion-panel>
+          <br>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Ressources
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" (click)="navigate('/bibliotheque')">Bibliothèque</li>
+              <li class="list-group-item" (click)="navigate('/base-de-donnees-ressources')">Base de donner</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
     </div>
   </mat-sidenav>
 
