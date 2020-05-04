@@ -27,7 +27,7 @@
       La maladie du COVID-19
     </button>
     <mat-menu #maladie="matMenu">
-      <button mat-menu-item>Origine</button>
+      <button mat-menu-item routerLink="maladie-covid">Origine</button>
       <button mat-menu-item>Symptômes</button>
       <button mat-menu-item>Prévention</button>
       <button mat-menu-item>Traitement</button>
@@ -38,11 +38,11 @@
       Que fait le gouvernement
     </button>
     <mat-menu #gouvernement="matMenu">
-      <button mat-menu-item>La stratégie</button>
-      <button mat-menu-item>Pour les Particuliers</button>
-      <button mat-menu-item>Pour les Entreprises</button>
-      <button mat-menu-item>Pour les Camerounais à l'étranger</button>
-      <button mat-menu-item>Sur le terrain</button>
+      <button mat-menu-item routerLink="gouvernement/gouvernement-strategie">La stratégie</button>
+      <button mat-menu-item routerLink="gouvernement/gouvernement-particuliers">Pour les Particuliers</button>
+      <button mat-menu-item routerLink="gouvernement/gouvernement-entreprises">Pour les Entreprises</button>
+      <button mat-menu-item routerLink="gouvernement/gouvernement-camerounais-etranger">Pour les Camerounais à l'étranger</button>
+      <button mat-menu-item routerLink="gouvernement/gouvernement-terrain">Sur le terrain</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">
@@ -50,11 +50,11 @@
       Recommendations
     </button>
     <mat-menu #recommendations="matMenu">
-      <button mat-menu-item>Pour les Professionnels</button>
-      <button mat-menu-item>Pour les Voyageurs</button>
-      <button mat-menu-item>Pour les Entreprises</button>
-      <button mat-menu-item>Pour les Camerounais à l'étranger</button>
-      <button mat-menu-item>Pour les Cultes</button>
+      <button mat-menu-item routerLink="recommendations/recommendations-professionnels">Pour les Professionnels</button>
+      <button mat-menu-item routerLink="recommendations/recommendations-voyageurs">Pour les Voyageurs</button>
+      <button mat-menu-item routerLink="recommendations/recommendations-entreprises">Pour les Entreprises</button>
+      <button mat-menu-item routerLink="recommendations/recommendations-camerounais-etranger">Pour les Camerounais à l'étranger</button>
+      <button mat-menu-item routerLink="recommendations/recommendations-cultes">Pour les Cultes</button>
     </mat-menu>
   </div>
   <div class="menu-dropdown">

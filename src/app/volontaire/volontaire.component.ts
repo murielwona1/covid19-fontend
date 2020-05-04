@@ -1,3 +1,4 @@
+import { HttpService } from './../services/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VolontaireComponent implements OnInit {
 
-  constructor() { }
+  expertiseData: any;
+
+  constructor(private httpService: HttpService) {
+    this.getExpertise();
+  }
 
   ngOnInit() {
   }
 
+  getExpertise() {
+    this.httpService.get("api/expertise/list-expertise").subscribe(res => {
+      this.expertiseData = res;
+    });
+  }
 }

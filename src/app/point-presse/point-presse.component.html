@@ -4,66 +4,27 @@
   </div>
   <div class="row">
     <div class="col-md-3">
-      <button class="btn-margin" mat-icon-button aria-label="Example icon-button with a heart icon">
-        <mat-icon>expand_less</mat-icon>
-      </button>
+
+      <img src="assets/images/arrow-up.png" height="20px" alt="" srcset="" style="margin-left: 20px;">
+
       <ul class="timeline">
-        <li>
-          <div class="source">
-            <p>Ministre de la santé</p>
-            <p>21 March, 2014</p>
-          </div>
-        </li>
-        <li>
-          <div class="source">
-            <p>Ministre de la santé</p>
-            <p>21 March, 2014</p>
-          </div>
-        </li>
-        <li>
-          <div class="source">
-            <p>Ministre de la santé</p>
-            <p>21 March, 2014</p>
-          </div>
-        </li>
-        <li>
-          <div class="source">
-            <p>Ministre de la santé</p>
-            <p>21 March, 2014</p>
-          </div>
-        </li>
-        <li>
-          <div class="source">
-            <p>Ministre de la santé</p>
-            <p>21 March, 2014</p>
+        <li *ngFor="let publication of mypublicationData;let i=index" style="cursor: pointer;">
+          <div class="source" (click)="setCurrentPost(publication, i)" [class.active-item]="currentIndex==i">
+            <p>{{publication.source}}</p>
+            <p>{{publication.date}}</p>
           </div>
         </li>
       </ul>
-      <button class="btn-margin" mat-icon-button aria-label="Example icon-button with a heart icon">
-        <mat-icon>expand_more</mat-icon>
-      </button>
+      <img src="assets/images/arrow-down.png" height="20px" alt="" srcset="">
     </div>
     <div class="col-md-9">
-      <img src="assets/images/share-icon.jpg" style="height: 50px; margin-bottom: 5px;" alt="" srcset="">
-      <iframe class="frame" src="https://www.youtube.com/embed/Yb3bm-bjvGY" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p> sLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis enim ut convallis congue. Vivamus
-        sed
-        condimentum risus. Maecenas eget odio porttitor, congue ipsum sed, tincidunt nibh. Vivamus fringilla a erat sed
-        pretium. Fusce odio turpis, elementum in magna ac, euismod lacinia nibh. Fusce eleifend venenatis est a
-        eleifend. Praesent accumsan purus nec feugiat condimentum. Nulla imperdiet, ante non dictum ullamcorper,
-        dolor urna efficitur justo, ac euismod tortor enim sit amet mauris. Nullam fermentum tincidunt purus, eu
-        malesuada purus mattis condimentum. Fusce scelerisque pharetra quam, nec posuere est feugiat eget. Vivamus
-        et tellus in lacus porttitor egestas. Nulla gravida eleifend odio, id venenatis odio pulvinar a. Vivamus aliquet
-        sollicitudin tellus, a condimentum massa ultricies vitae. Integer ultricies diam cursus felis
-        Vivamus dapibus, est quis ullamcorper sollicitudin, lacus nisi vehicula lectus, vel aliquam arcu sapien vel
-        dolor. Donec at luctus lacus. Phasellus iaculis, urna ut tempus mollis, odio nisl iaculis leo, et pretium nisi
-        urna
-        ac mauris. Aenean auctor dictum nisi vitae faucibus. Sed ut nisl eget sapien tincidunt vulputate in vel est.
-        Suspendisse velit lorem, viverra eget justo id, dapibus lacinia ante. Donec sollicitudin egestas tristique.
-        Pellentesque cursus nulla ac ligula scelerisque, ac varius eros condimentum. Sed nec nunc laoreet dolor
-        tristique congue. Vestibulum tincidunt massa convallis mollis ornare. Sed scelerisque est et elit lacinia, vel
-      </p>
+      <img src="assets/images/share-icon.jpg" style="height: 50px; margin-bottom: 5px;" alt="" srcset=""
+        *ngIf="curentPostData.image">
+      <iframe class="frame" [src]="urlSafe" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        *ngIf="curentPostData.videos"></iframe>
+      <h1 *ngIf="curentPostData">{{curentPostData.libelle}}</h1>
+      <p *ngIf="curentPostData">{{curentPostData.description}}</p>
       <p>Source: MINSANTE</p>
       <div class="tags" style="margin-top: 20px;">
         <div class="btn" style="background-color: white; color: black; margin-left: 10px;">Tags :</div>

@@ -1,0 +1,41 @@
+<div class="container-fluid mb-1" style="margin-top: 70px;">
+    <div class="alert alert-dark mt-2" role="alert">
+      Que fait le gouvernement > {{currentRouteParam}}
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+
+            <img src="assets/images/arrow-up.png" height="20px" alt="" srcset="" style="margin-left: 20px;">
+
+            <ul class="timeline">
+                <li *ngFor="let publication of mypublicationData;let i=index" style="cursor: pointer;">
+                    <div class="source" (click)="setCurrentPost(publication, i)" [class.active-item]="currentIndex==i">
+                        <p>{{publication.source}}</p>
+                        <p>{{publication.date}}</p>
+                    </div>
+                </li>
+            </ul>
+            <img src="assets/images/arrow-down.png" height="20px" alt="" srcset="">
+        </div>
+        <div class="col-md-9">
+            <img src="assets/images/share-icon.jpg" style="height: 50px; margin-bottom: 5px;" alt="" srcset=""
+                *ngIf="curentPostData?.image">
+            <iframe class="frame" [src]="urlSafe" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                *ngIf="curentPostData.videos"></iframe>
+            <h1 *ngIf="curentPostData">{{curentPostData.libelle}}</h1>
+            <p *ngIf="curentPostData">{{curentPostData.description}}</p>
+            <p>Source: MINSANTE</p>
+            <div class="tags" style="margin-top: 20px;">
+                <div class="btn" style="background-color: white; color: black; margin-left: 10px;">Tags :</div>
+                <div class="btn" style="background-color: #183A7D; color: white; margin-left: 10px;">Economie</div>
+                <div class="btn" style="background-color: #183A7D; color: white; margin-left: 10px;">Prévention</div>
+                <div class="btn" style="background-color: #183A7D; color: white; margin-left: 10px;">Scolarité</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="assets/images/share-icon.jpg" style="height: 50px; margin-bottom: 5px;" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+</div>

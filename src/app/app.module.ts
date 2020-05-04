@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -57,7 +58,9 @@ import { FondSolidariteComponent } from './fond-solidarite/fond-solidarite.compo
 import { VolontaireComponent } from './volontaire/volontaire.component';
 import { RessourcesComponent } from './ressources/ressources.component';
 import { BaseDeDonneesRessourcesComponent } from './base-de-donnees-ressources/base-de-donnees-ressources.component';
-import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibliotheque-ressources.component';
+import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibliotheque-ressources.component';;
+import { GouvernementComponent } from './gouvernement/gouvernement.component';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +78,9 @@ import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibli
     VolontaireComponent,
     RessourcesComponent,
     BaseDeDonneesRessourcesComponent,
-    BibliothequeRessourcesComponent
+    BibliothequeRessourcesComponent,
+    GouvernementComponent,
+    RecommendationsComponent
   ],
   imports: [
     BrowserModule,
@@ -120,7 +125,8 @@ import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibli
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,6 @@
+import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { GouvernementComponent } from './gouvernement/gouvernement.component';
+
 import { BaseDeDonneesRessourcesComponent } from './base-de-donnees-ressources/base-de-donnees-ressources.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -23,6 +26,8 @@ const routes: Routes = [
       { path: '', component: PointPresseComponent },
     ]
   },
+  { path: 'gouvernement/:id', component: GouvernementComponent },
+  { path: 'recommendations/:id', component: RecommendationsComponent },
   { path: 'dons-projet', component: DonsProjetComponent },
   { path: 'volontaire', component: VolontaireComponent },
   { path: 'fond-solidarite', component: FondSolidariteComponent },

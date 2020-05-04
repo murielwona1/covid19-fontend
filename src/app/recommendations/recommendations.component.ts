@@ -1,15 +1,18 @@
 import { HttpService } from './../services/http.service';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
+
+import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-point-presse',
-  templateUrl: './point-presse.component.html',
-  styleUrls: ['./point-presse.component.css']
+  selector: 'app-recommendations',
+  templateUrl: './recommendations.component.html',
+  styleUrls: ['./recommendations.component.css']
 })
-export class PointPresseComponent implements OnInit {
+export class RecommendationsComponent implements OnInit {
+
   offset: String = "0";
-  typePublication: String = "point-presse";
   publicationData: any;
 
   urlSafe: SafeResourceUrl;
@@ -25,9 +28,15 @@ export class PointPresseComponent implements OnInit {
   ]
 
   curentPostData = [];
+  currentRouteParam = 'null';
 
-  constructor(private httpService: HttpService, public sanitizer: DomSanitizer) {
-    this.getPublicationByType(this.offset, this.typePublication);
+  constructor(private httpService: HttpService, public sanitizer: DomSanitizer, private route: ActivatedRoute, private router: Router) {
+    router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.currentRouteParam = this.route.snapshot.paramMap.get('id');
+      this.getPublicationByType(20, this.currentRouteParam);
+    });
   }
 
 
@@ -41,10 +50,13 @@ export class PointPresseComponent implements OnInit {
   }
 
   getPublicationByType(offset, type) {
-    this.httpService.get("api/publication/list-publication/" + offset + "/" + type).subscribe(res => {
+    this.httpService.get("api/publication/list-publication/" + offset + "/" + type).subscribe((res: any) => {
       this.publicationData = res;
-      this.curentPostData = res['0'];
-      this.setVideo();
+      if (res.length > 0) {
+        this.curentPostData = res['0'];
+        this.setVideo();
+      }
+
     }, err => {
       console.log(err);
     }, () => {
@@ -55,6 +67,5 @@ export class PointPresseComponent implements OnInit {
   setVideo() {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.curentPostData['videos']);
   }
-
 
 }
