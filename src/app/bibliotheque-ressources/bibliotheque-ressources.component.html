@@ -5,14 +5,13 @@
   <div class="row">
     <div class="col-md-2">
       <div class="block">
-        <div class="categorie categorie-active">Documents</div>
-        <div class="categorie">Articles</div>
-        <div class="categorie">Testes</div>
-        <div class="categorie">Images</div>
-        <div class="categorie">Audios</div>
-        <div class="categorie">Videos</div>
-        <div class="categorie">Livres</div>
-        <div class="categorie">Documents</div>
+        <div id="categorie" [className]="type == 'documents'?'categorie-active':null" (click)='checkType("documents")'>Documents</div>
+        <div id="categorie" [className]="type == 'articles'?'categorie-active':null" (click)='checkType("articles")'>Articles</div>
+        <div id="categorie" [className]="type == 'textes'?'categorie-active':null" (click)='checkType("textes")'>Textes</div>
+        <div id="categorie" [className]="type == 'images'?'categorie-active':null" (click)='checkType("images")'>Images</div>
+        <div id="categorie" [className]="type == 'audios'?'categorie-active':null" (click)='checkType("audios")'>Audios</div>
+        <div id="categorie" [className]="type == 'videos'?'categorie-active':null" (click)='checkType("videos")'>Videos</div>
+        <div id="categorie" [className]="type == 'livres'?'categorie-active':null" (click)='checkType("livres")'>Livres</div>
       </div>
     </div>
     <div class="col-md-10">

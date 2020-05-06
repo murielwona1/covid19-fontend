@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: "https://innov237.com/covid19Api/public/"
+  url: 'https://innov237.com/covid19Api/public/'
 };
 
 /*

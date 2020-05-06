@@ -58,7 +58,7 @@ import { FondSolidariteComponent } from './fond-solidarite/fond-solidarite.compo
 import { VolontaireComponent } from './volontaire/volontaire.component';
 import { RessourcesComponent } from './ressources/ressources.component';
 import { BaseDeDonneesRessourcesComponent } from './base-de-donnees-ressources/base-de-donnees-ressources.component';
-import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibliotheque-ressources.component';;
+import { BibliothequeRessourcesComponent } from './bibliotheque-ressources/bibliotheque-ressources.component';
 import { GouvernementComponent } from './gouvernement/gouvernement.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 
